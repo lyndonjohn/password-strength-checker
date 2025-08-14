@@ -10,6 +10,7 @@ A reusable JavaScript module for checking password strength with 8 different cri
 - **Smart Suggestions**: Offers specific advice to improve password strength
 - **Common Pattern Detection**: Identifies and flags common weak passwords
 - **Repeating Character Detection**: Checks for consecutive repeating characters
+- **Password Generator**: Generates a strong password based on the criteria
 
 ## Password Criteria
 
