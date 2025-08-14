@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Password Strength Checker</title>
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Password Strength Checker</h1>
+        
+        <div class="input-group">
+            <label for="password">Enter your password:</label>
+            <div style="display: flex; gap: 10px;">
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Type your password here...">
+                    <button id="togglePassword" type="button">👁️</button>
+                </div>
+                <button id="generateBtn">Generate Password</button>
+            </div>
+        </div>
+
+        <div class="strength-meter">
+            <div class="strength-bar">
+                <div class="strength-fill" id="strengthFill"></div>
+            </div>
+            <div class="strength-text" id="strengthText">Enter a password to check strength</div>
+            <div class="score" id="score">Score: 0/8</div>
+        </div>
+
+        <div class="criteria">
+            <h3>Password Criteria:</h3>
+            <div class="criterion">
+                <span class="criterion-icon" id="lowercase">❌</span>
+                <span class="criterion-text">Contains at least 1 lowercase letter</span>
+            </div>
+            <div class="criterion">
+                <span class="criterion-icon" id="uppercase">❌</span>
+                <span class="criterion-text">Contains at least 1 uppercase letter</span>
+            </div>
+            <div class="criterion">
+                <span class="criterion-icon" id="number">❌</span>
+                <span class="criterion-text">Contains at least 1 number</span>
+            </div>
+            <div class="criterion">
+                <span class="criterion-icon" id="special">❌</span>
+                <span class="criterion-text">Contains at least 1 special character</span>
+            </div>
+            <div class="criterion">
+                <span class="criterion-icon" id="length8">❌</span>
+                <span class="criterion-text">At least 8 characters long</span>
+            </div>
+            <div class="criterion">
+                <span class="criterion-icon" id="lengthMore">❌</span>
+                <span class="criterion-text">More than 8 characters long</span>
+            </div>
+            <div class="criterion">
+                <span class="criterion-icon" id="noPatterns">❌</span>
+                <span class="criterion-text">No common patterns</span>
+            </div>
+            <div class="criterion">
+                <span class="criterion-icon" id="noRepeating">❌</span>
+                <span class="criterion-text">No repeating consecutive characters</span>
+            </div>
+        </div>
+
+        <div class="suggestions hidden" id="suggestions">
+            <h3>💡 Suggestions to improve your password:</h3>
+            <ul id="suggestionsList"></ul>
+        </div>
+    </div>
+
+    <script src="password-strength-checker.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
